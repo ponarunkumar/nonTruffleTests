@@ -19,7 +19,7 @@ MetaCoin.setProvider(web3.currentProvider);
 describe("MetaCoin", function(){
 	var accounts, networkId, convertLib, metaCoin;
 
-describe("get accounts", function(){
+before("get accounts", function(){
 	return web3.eth.getAccountsPromise()
 		.then(_accounts => accounts = _accounts)
 		.then(()=>web3.version.getNetworkPromise())
